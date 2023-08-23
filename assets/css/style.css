@@ -1,0 +1,337 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+}
+/********************** start nav ************************************/
+nav{
+  width: 100vw;
+  color: white;
+  background-color: #2c3e50;
+  height: 100px;
+  padding: 0 126px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+nav .logo{
+  flex-shrink: 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+nav button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/****************end nav**********************/
+
+/****************start hero*******************/
+.hero{
+  height: 100vh;
+  background-color: #1ABC9C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.hero .pic{
+  position: relative;
+}
+.hero .circle{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #2C3E50;
+
+}
+.hero .pic img{
+  width: 150px;
+  height: 150px;
+  border-radius: 33%;
+  position: absolute;
+  top: -20px;
+}
+.hero h1{
+  margin-top: 30px;
+  font-size: 3.75rem;
+  color: white;
+  text-align: center;
+}
+ .icon {
+  color: white;
+  position: relative;
+  margin-top: 30px;
+}
+.icon::before{
+  content: " ";
+  display: block;
+  width: 115px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: -64px;
+  transform: translate(-50%,-50%);
+}
+.icon::after{
+  content: " ";
+  display: block;
+  width: 115px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: -179px;
+  transform: translate(-50%,-50%);
+}
+
+.hero .job{
+  margin-top: 30px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+/**********************end hero********************/
+/**********************start portfolio**************/
+#portfolio h1 , #about h1{
+width: max-content;
+margin: 30px auto;
+font-size: 3.75rem;
+color: #2C3E50;
+}
+#portfolio .icon{
+  color: #2C3E50;
+  width: max-content;
+  margin: 30px auto;
+}
+#portfolio .icon::before ,#portfolio .icon::after{
+  background-color: #2C3E50;
+
+}
+
+#portfolio .container , #about .container{
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#portfolio .container .card{
+  width: 356px;
+  height: 256px;
+  border-radius: 10px;
+  background-color: aqua;
+  position: relative;
+}
+#portfolio .container .card .circle{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: blueviolet;
+  border-radius: 50%;
+}
+#portfolio .container .card .circle img{
+  width: 130px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: blueviolet;
+  border-radius: 50%;
+
+}
+#portfolio .container .card .circle .r{
+  width: 200px;
+}
+
+
+
+/********************end portfolio***********************/
+
+/********************start about*************************/
+#about , #contactMe{
+  max-width: 100vw;
+  background-color: #1ABC9C;
+  color: white;
+  padding: 20px 0px;
+}
+#about .container , #contactMe .container{
+  margin-top: 30px;
+}
+#about h1  {
+  color: white;
+}
+#about .icon , #contactMe .icon{
+  width: max-content;
+  margin: 0 auto;
+}
+#about .p1{
+  width: 200px;
+}
+#about .p2{
+  width: 200px;
+}
+#about button{
+background-color: #1ABC9C;
+color: white;
+padding: 10px;
+border: 1px solid white;
+border-radius: 4px;
+width: max-content;
+display: block;
+margin: 0px auto;
+margin-top: 20px;
+}
+/********************end about*******************/
+
+/******************start contact me***************/
+#contactMe{
+  background-color: white;
+  padding-left: 20px;
+ 
+}
+#contactMe h1{
+  color: #2C3E50;
+}
+#contactMe .icon::before{
+  background-color: #2C3E50;
+}
+#contactMe .icon::after{
+  background-color: #2C3E50;
+}
+#contactMe .icon{
+  color: #2C3E50;
+}
+#contactMe h1{
+  width: max-content;
+  margin: 20px auto;
+  font-size: 3.75rem;
+}
+#contactMe .container form{
+  width: 400px;
+  margin: 0 auto;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contactMe .container form label{
+  align-self: start;
+}
+#contactMe .container form input , #contactMe .container form textarea{
+  border: none;
+  border-bottom: 1px solid lightgray;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+#contactMe .container button{
+  color: white;
+  padding: 10px;
+  background-color: #1ABC9C;
+  border: none;
+  border-radius: 3px;
+  align-self: flex-start;
+  cursor: pointer;
+}
+/**********************end contact me*************************/
+/* *******************start end section*************************/
+#end{
+  background-color: #2C3E50;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0;
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+#end .count{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.icons i{
+color: white;
+}
+#end .child p a{
+  color: rgb(39, 102, 117);
+}
+#end  .icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#end .icons a{
+  text-decoration: none;
+  color: white;
+}
+#end .child{
+  text-align: center;
+  max-width: 250px;
+}
+#end .child h3{
+  margin-bottom: 10px;
+}
+/******************** end end section*********************/
+/********************* start footer ***********************/
+footer{
+  color: white;
+  background-color: rgb(26, 37, 47);
+  padding: 30px 0;
+}
+footer p{
+  text-align: center;
+}
+/******************** end footer *******************/
+
+/************8 start media****************** */
+@media screen and (max-width: 992px){
+  nav button{
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  nav{
+    padding: 0 50px;
+  }
+  html{
+    font-size: 10px;
+  }
+}
+/*****************end media****************88/
